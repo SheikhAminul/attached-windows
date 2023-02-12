@@ -40,34 +40,41 @@ A minimal example of attaching 3 windows:
 ```javascript
 import AttachedWindows from 'attached-windows'
 
-const container = {
-	top: 0,
-	left: 0,
-	width: 1350,
-	height: 600,
-	state: 'normal'
+const configuration = {
+    container: {
+        top: 0,
+        left: 0,
+        width: 1300,
+        height: 600,
+        state: 'normal'
+    },
+    windows: [
+        {
+            id: (await chrome.windows.create({ type: 'normal', url: 'https://twitter.com/' })).id,
+            widthFraction: 0.5,
+            isPrimary: true,
+            isHidden: false,
+            type: 'normal'
+        },
+        {
+            id: (await chrome.windows.create({ type: 'normal', url: 'https://www.google.com/' })).id,
+            widthFraction: 0.225,
+            isPrimary: false,
+            type: 'popup'
+        },
+        {
+            id: (await chrome.windows.create({ type: 'normal', url: 'https://www.github.com/' })).id,
+            widthFraction: 0.25,
+            isPrimary: false,
+            type: 'popup'
+        }
+    ]
 }
 
-const windows = [
-	{
-		id: (await chrome.windows.create({ type: 'normal', url: 'https://twitter.com/' })).id,
-		widthFraction: 2,
-		isPrimary: true
-	},
-	{
-		id: (await chrome.windows.create({ type: 'popup', url: 'https://www.google.com/' })).id,
-		widthFraction: 1
-	},
-	{
-		id: (await chrome.windows.create({ type: 'popup', url: 'https://github.com/' })).id,
-		widthFraction: 1
-	}
-]
-
-AttachedWindows.initialize({ container, windows })
+AttachedWindows.initialize(configuration)
 ```
 
-Close attached windows:
+Terminates the AttachedWindows instance and close attached windows. You can specify the options `closeWindows` and `closePrimary` to control if all windows or just the primary window should be closed.
 ```javascript
 AttachedWindows.terminate({ closeWindows: true, closePrimary: false })
 ```
