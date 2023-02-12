@@ -1,0 +1,41 @@
+{
+	"name": "attached-windows",
+	"version": "1.0.0",
+	"description": "Using Chrome extension API attach multiple normal and/or popup windows together that behave like a single window.",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"dist": "webpack --no-devtool"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SheikhAminul/attached-windows.git"
+	},
+	"keywords": [
+		"chrome",
+		"chrome-extension",
+		"attached-windows",
+		"chrome-window",
+		"popup-window",
+		"side-window",
+		"extension",
+		"browser"
+	],
+	"author": "Sheikh Aminul <aminulfse@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/SheikhAminul/attached-windows/issues"
+	},
+	"files": [
+		"lib/**/*"
+	],
+	"homepage": "https://github.com/SheikhAminul/attached-windows#readme",
+	"devDependencies": {
+		"typescript": "^4.9.5",
+		"@types/chrome": "^0.0.212",
+		"ts-loader": "^9.4.2",
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.1"
+	}
+}
