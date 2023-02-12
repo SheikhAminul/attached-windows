@@ -1,4 +1,4 @@
-interface AttachedWindowsContainer {
+export interface AttachedWindowsContainer {
     top: number,
     left: number,
     width: number,
@@ -6,7 +6,7 @@ interface AttachedWindowsContainer {
     state: 'normal' | 'minimized'
 }
 
-interface AttachedWindowsWindow {
+export interface AttachedWindowsWindow {
     id: number,
     name?: any,
     widthFraction: number,
@@ -22,7 +22,7 @@ interface AttachedWindowsWindow {
     }
 }
 
-interface AttachedWindowsConfiguration {
+export interface AttachedWindowsConfiguration {
     container: AttachedWindowsContainer,
     windows: {
         id: number,
@@ -194,4 +194,4 @@ class AttachedWindows {
     }
 }
 
-export default AttachedWindows
+export default AttachedWindows  

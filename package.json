@@ -1,6 +1,6 @@
 {
 	"name": "attached-windows",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Using Chrome extension API attach multiple normal and/or popup windows together that behave like a single window.",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
