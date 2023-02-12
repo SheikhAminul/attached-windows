@@ -13,7 +13,7 @@ Use attached-windows module in your Chrome extension to attach multiple normal a
 *   [Features](#features)
 *   [Install](#install)
 *   [Usage](#usage)
-*   [API Reference](#API_Reference)
+*   [API Reference](#api-reference)
 *   [License](#license)
 *   [Author](#author)
 
@@ -39,8 +39,9 @@ A minimal example of attaching 3 windows:
 
 ```javascript
 import AttachedWindows from 'attached-windows'
+import { AttachedWindowsConfiguration } from 'attached-windows'
 
-const configuration = {
+const configuration: AttachedWindowsConfiguration = {
     container: {
         top: 0,
         left: 0,
@@ -50,20 +51,20 @@ const configuration = {
     },
     windows: [
         {
-            id: (await chrome.windows.create({ type: 'normal', url: 'https://twitter.com/' })).id,
+            id: (await chrome.windows.create({ type: 'normal', url: 'https://twitter.com/' })).id as number,
             widthFraction: 0.5,
             isPrimary: true,
             isHidden: false,
             type: 'normal'
         },
         {
-            id: (await chrome.windows.create({ type: 'normal', url: 'https://www.google.com/' })).id,
+            id: (await chrome.windows.create({ type: 'normal', url: 'https://www.google.com/' })).id as number,
             widthFraction: 0.225,
             isPrimary: false,
             type: 'popup'
         },
         {
-            id: (await chrome.windows.create({ type: 'normal', url: 'https://www.github.com/' })).id,
+            id: (await chrome.windows.create({ type: 'normal', url: 'https://www.github.com/' })).id as number,
             widthFraction: 0.25,
             isPrimary: false,
             type: 'popup'
