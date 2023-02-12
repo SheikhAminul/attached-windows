@@ -74,10 +74,11 @@ const configuration = {
 AttachedWindows.initialize(configuration)
 ```
 
-Terminates the AttachedWindows instance and close attached windows. You can specify the options `closeWindows` and `closePrimary` to control if all windows or just the primary window should be closed.
+Terminates the AttachedWindows instance and close attached windows:
 ```javascript
 AttachedWindows.terminate({ closeWindows: true, closePrimary: false })
 ```
+You can specify the options `closeWindows` and `closePrimary` to control if all windows or just the primary window should be closed.
 
 
 ## Documentation
