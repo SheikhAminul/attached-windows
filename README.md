@@ -14,6 +14,7 @@ Use attached-windows module in your Chrome extension to attach multiple normal a
 *   [Install](#install)
 *   [Usage](#usage)
 *   [API Reference](#api-reference)
+*   [Contributing](#contributing)
 *   [License](#license)
 *   [Author](#author)
 
@@ -119,6 +120,12 @@ Properties:
 Methods:
 - `initialize`: A method that initializes and attaches multiple windows. The input parameter `configuration` is an object of type `AttachedWindowsConfiguration` that includes the information required to initialize the attached windows.
 - `terminate`: A method that terminates the AttachedWindows instance and closes the attached windows. You can specify the options `closeWindows` and `closePrimary` to control if all windows or just the primary window should be closed.
+
+
+
+## Contributing
+
+You are welcome to contribute! If you are adding a feature or fixing a bug, please contribute to the [GitHub repository](https://github.com/SheikhAminul/attached-windows/).
 
 
 ## License
